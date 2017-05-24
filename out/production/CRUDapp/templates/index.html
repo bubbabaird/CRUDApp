@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/create-contact" method="post">
+    <input type="hidden" name="userId" value="{{id}}"/>
+    <input type="text" placeholder="First Name" name="firstName"/>
+    <input type="text" placeholder="Last Name" name="lastName"/>
+    <input type="text" placeholder="Cell Phone" name="cell"/>
+    <input type="number" placeholder="Age" name="age"/>
+    <button type="submit">Submit</button>
+</form>
+<ol>
+    {{#contacts}}
+    <li>{{firstName}} - {{lastName}} - {{cell}} - {{age}}</li>
+    {{/contacts}}
+</ol>
+<form action="/logout" method="post">
+    <input type="submit">Logout</input>
+</form>
+</body>
+</html>
